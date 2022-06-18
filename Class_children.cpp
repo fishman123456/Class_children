@@ -18,13 +18,29 @@ public:
 	}
 	void getChildren()
 	{
-		cout << "Children: " <<"\tИмя - "<< name  << "\tФамилия - " << soneme <<"\tВозраст - " << age << endl;
+		cout << "Children: " <<"\tИмя - "<< name  << "\tФамилия - " << soneme <<"\tВозраст - " << age << "\n\n";
 	}
 }; // конец  класса
 
 int main()
 { 
-	setlocale(LC_ALL, "RUS");
+	system("chcp 1251");
+	//setlocale(LC_ALL, "RUS");
+	string nameS_m;
+	string sonemeS_m;
+	int ageS_m;
+	cout << "\n\tвведите имя\t";
+	cin >> nameS_m;
+	cout << endl;
+	cout << "\tвведите фамилию\t";
+	cin >> sonemeS_m;
+	cout << endl;
+	cout << "\tвведите возраст\t";
+	cin >> ageS_m;
+	cout << endl << endl;
+	children first;
+	first.setChildren(nameS_m, sonemeS_m, ageS_m);
+	first.getChildren();
 	children s;
 	s.setChildren("oleg", "shakshin", 4);
 	s.getChildren();
