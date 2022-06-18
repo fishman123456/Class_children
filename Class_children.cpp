@@ -1,5 +1,5 @@
 ﻿// Class_children.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
+//18-06-2022 - реализация ввода с клавиатуры 22:53 начало
 
 #include <iostream>
 using namespace std;
@@ -18,12 +18,13 @@ public:
 	}
 	void getChildren()
 	{
-		cout << "Children: " << name << "-" << soneme << "-" << age << endl;
+		cout << "Children: " <<"\tИмя - "<< name  << "\tФамилия - " << soneme <<"\tВозраст - " << age << endl;
 	}
 }; // конец  класса
 
 int main()
 { 
+	setlocale(LC_ALL, "RUS");
 	children s;
 	s.setChildren("oleg", "shakshin", 4);
 	s.getChildren();
